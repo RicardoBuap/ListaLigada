@@ -42,10 +42,15 @@ public class ListaLigada {
     }
 
     public void ingresarNodoInicioLista(Object informacion){
-        Nodo nuevoNodo = new Nodo(informacion);
-        nuevoNodo.siguiente = inicioLista;
-        inicioLista = nuevoNodo;
-        tamaño++;
+        if(listaVacia()){
+            ingresarNodoFinalLista(informacion);
+        }
+        else{
+            Nodo nuevoNodo = new Nodo(informacion);
+            nuevoNodo.siguiente = inicioLista;
+            inicioLista = nuevoNodo;
+            tamaño++;
+        }
     }
 }
 
