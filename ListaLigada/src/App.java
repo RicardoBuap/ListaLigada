@@ -15,8 +15,8 @@ public class App {
             System.out.println("Ingresar nodo en posición de la lista: 3");
             System.out.println("Eliminar inicio de la lista ligada:    4");
             System.out.println("Eliminar final de la lista ligada:     5");
-            System.out.println("Vacíar la lista ligada:     6");
-            System.out.println("Imprimir lista ligada: 7");
+            System.out.println("Vacíar la lista ligada: 6");
+            System.out.println("Imprimir lista ligada:  7");
             System.out.println("Imprimir inicio de la lista: 8");
             System.out.println("Imprimir final de la lista:  9");
             System.out.println("Tamaño de la lista ligada: 10");
