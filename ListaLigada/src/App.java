@@ -9,16 +9,17 @@ public class App {
         int posicion;
         Object informacion;
         while(continuar){
-            System.out.println("- - - - - - - - Menú - - - - - - - -");
+            System.out.println("- - - - - - - - - Menú - - - - - - - - -");
             System.out.println("Ingresar nodo al inicio de la lista:   1");
             System.out.println("Ingresar nodo al final de la lista:    2");
             System.out.println("Ingresar nodo en posición de la lista: 3");
-            System.out.println("Imprimir lista ligada: 4");
-            System.out.println("Imprimir inicio de la lista: 5");
-            System.out.println("Imprimir final de la lista:  6");
-            System.out.println("Tamaño de la lista ligada: 7");
-            System.out.println("¿La lista ligada está vacía?: 8");
-            System.out.println("Salir del programa: 9");
+            System.out.println("Eliminar inicio de la lista ligada:    4");
+            System.out.println("Imprimir lista ligada: 5");
+            System.out.println("Imprimir inicio de la lista: 6");
+            System.out.println("Imprimir final de la lista:  7");
+            System.out.println("Tamaño de la lista ligada: 8");
+            System.out.println("¿La lista ligada está vacía?: 9");
+            System.out.println("Salir del programa: 10");
             System.out.print("\nIngresa una opción del menú:");
             opcion = teclado.nextInt();
 
@@ -46,7 +47,16 @@ public class App {
                     lista.ingresarNodoPosicionLista(informacion, posicion);
                     break;
 
-                case 4: 
+                case 4:
+                    if(lista.listaVacia()){
+                        System.out.println("La lista ligada está vacía.");
+                    }
+                    else{
+                        System.out.println("Se ha eliminado el nodo inicial con información: " + lista.eliminarNodoInicioLista());
+                    }
+                    break;
+
+                case 5: 
                     if(lista.listaVacia()){
                         System.out.println("La lista ligada está vacía.");
                     }
@@ -55,7 +65,7 @@ public class App {
                     }
                     break;
 
-                case 5:
+                case 6:
                     if(lista.listaVacia()){
                         System.out.println("La lista ligada está vacía.");
                     }
@@ -64,7 +74,7 @@ public class App {
                     }
                     break;
 
-                case 6:
+                case 7:
                     if(lista.listaVacia()){
                         System.out.println("La lista ligada está vacía.");
                     }
@@ -73,7 +83,7 @@ public class App {
                     }
                     break;
 
-                case 7:
+                case 8:
                     if(lista.listaVacia()){
                         System.out.println("La lista ligada está vacía.");
                     }
@@ -82,7 +92,7 @@ public class App {
                     }
                     break;
 
-                case 8:
+                case 9:
                     if(lista.listaVacia()){
                         System.out.println("La lista ligada está vacía.");
                     }
@@ -91,7 +101,7 @@ public class App {
                     }
                     break;
 
-                case 9:
+                case 10:
                     System.out.println("Saliendo del programa...");
                     continuar = false;
                     break;

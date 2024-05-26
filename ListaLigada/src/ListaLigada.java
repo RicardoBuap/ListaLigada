@@ -82,5 +82,12 @@ public class ListaLigada {
             tamaño++;
         }
     }
+
+    public Object eliminarNodoInicioLista(){
+        Object eliminado = inicioLista.informacion;
+        inicioLista = inicioLista.siguiente;
+        tamaño--;
+        return eliminado;
+    }
 }
 
