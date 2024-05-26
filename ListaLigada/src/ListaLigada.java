@@ -111,5 +111,25 @@ public class ListaLigada {
         }
         return eliminado;
     }
+
+    public Object eliminarNodoPosicionLista(int posicion){
+        Object eliminado = null;
+        if(posicion >= tamañoLista()){
+            eliminado = eliminarNodoFinalLista();
+        }
+        else if(posicion <= 1){
+            eliminado = eliminarNodoInicioLista();
+        }
+        else{
+            Nodo recorrido = inicioLista;
+            for(int i = 1; i < posicion - 1; i++){
+                recorrido = recorrido.siguiente;
+            }
+            eliminado = recorrido.siguiente.informacion;
+            recorrido.siguiente = recorrido.siguiente.siguiente;
+            tamaño--;
+        }
+        return eliminado;
+    }
 }
 
