@@ -89,5 +89,27 @@ public class ListaLigada {
         tamaño--;
         return eliminado;
     }
+
+    public void vaciarLista(){
+        while(!listaVacia())
+            eliminarNodoInicioLista();
+    }
+
+    public Object eliminarNodoFinalLista(){
+        Object eliminado = finalLista.informacion;
+        if(tamañoLista() == 1){
+            vaciarLista();
+        }
+        else{
+            Nodo recorrido = inicioLista;
+            while(recorrido.siguiente.siguiente != null){
+                recorrido = recorrido.siguiente;
+            }
+            recorrido.siguiente = recorrido.siguiente.siguiente;
+            finalLista = recorrido;
+            tamaño--;
+        }
+        return eliminado;
+    }
 }
 
